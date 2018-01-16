@@ -1,0 +1,18 @@
+lxcnet_use_bridge: "true"
+
+lxcnet_domain: "lxc"
+lxcnet_bridge_name: lxcbr0
+lxcnet_bridge_mac: "00:16:3e:00:00:00"
+
+lxcnet_ip4_addr: "10.0.3.1"
+lxcnet_ip4_netmask: "255.255.255.0"
+lxcnet_ip4_network: "10.0.3.0/24"
+lxcnet_ip4_dhcp_first: "10.0.3.2"
+lxcnet_ip4_dhcp_last: "10.0.3.254"
+lxcnet_ip4_dhcp_max: 253
+lxcnet_ip4_dhcp_conffile: ""
+
+lxcnet_ip6_addr: ""
+lxcnet_ip6_netmask: ""
+lxcnet_ip6_network: ""
+lxcnet_ip6_nat: "false"

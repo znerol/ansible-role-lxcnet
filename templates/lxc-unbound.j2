@@ -1,0 +1,6 @@
+server:
+	# Delegate lxc zone to dnsmasq
+	domain-insecure: "{{ lxcnet_domain }}"
+	stub-zone:
+		name: "{{ lxcnet_domain }}"
+		stub-addr: "{{ lxcnet_ip4_addr }}"

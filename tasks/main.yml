@@ -1,0 +1,21 @@
+- name: Install Resolvconf
+  apt: name=resolvconf state=present
+
+- name: Install DNS Resolver
+  apt: name=unbound state=present
+
+- name: Configure DNS Resolver
+  template: src=lxc-unbound.j2 dest=/etc/unbound/unbound.conf.d/lxc.conf
+  register: dns_resolver
+
+- name: Set up LXC Networking
+  template: src=lxc-net.j2 dest=/etc/default/lxc-net
+  register: lxc_networking
+
+- name: Restart DNS Resolver
+  service: name=unbound state=restarted
+  when: dns_resolver|changed
+
+- name: Restart LXC Networking
+  service: name=lxc-net state=restarted
+  when: lxc_networking|changed

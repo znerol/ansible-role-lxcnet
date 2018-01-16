@@ -1,0 +1,17 @@
+USE_LXC_BRIDGE="{{ lxcnet_use_bridge }}"
+
+LXC_DOMAIN="{{ lxcnet_domain }}"
+LXC_BRIDGE="{{ lxcnet_bridge_name }}"
+LXC_BRIDGE_MAC="{{ lxcnet_bridge_mac }}"
+
+LXC_ADDR="{{ lxcnet_ip4_addr }}"
+LXC_NETMASK="{{ lxcnet_ip4_netmask }}"
+LXC_NETWORK="{{ lxcnet_ip4_network }}"
+LXC_DHCP_RANGE="{{ lxcnet_ip4_dhcp_first }},{{ lxcnet_ip4_dhcp_last }}"
+LXC_DHCP_MAX="{{ lxcnet_ip4_dhcp_max }}"
+LXC_DHCP_CONFILE="{{ lxcnet_ip4_dhcp_conffile }}"
+
+LXC_IPV6_ADDR="{{ lxcnet_ip6_addr }}"
+LXC_IPV6_MASK="{{ lxcnet_ip6_netmask }}"
+LXC_IPV6_NETWORK="{{ lxcnet_ip6_network }}"
+LXC_IPV6_NAT="{{ lxcnet_ip6_nat }}"
